@@ -26,7 +26,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 .header {
   background: #666
   line-height: 60px

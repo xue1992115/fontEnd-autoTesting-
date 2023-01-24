@@ -11,7 +11,7 @@ it('Header 样式发生改变，做提示', () => {
 // 单元测试用例
 it('Header 包含input框', () => {
   const wrapper = shallowMount(Header)
-  const input = findTestWrapper(wrapper, '[data-test="input"]')
+  const input = findTestWrapper(wrapper, '[data-test="input"]').at(0)
   // wrapper.exists api表示是否存在这个节点
   expect(input.exists()).toBe(true)
 })
@@ -26,7 +26,7 @@ it('Header 包含input框 初始值为空的', () => {
 // 测试修改input框中的值
 it('Header 中input框值发生变化，数据应该跟着变化', () => {
   const wrapper = shallowMount(Header)
-  const input = findTestWrapper(wrapper, '[data-test="input"]')
+  const input = findTestWrapper(wrapper, '[data-test="input"]').at(0)
   input.setValue('hxx')
   const inputValue = wrapper.vm.$data.inputValue
   // wrapper.exists api表示是否存在这个节点
@@ -36,7 +36,7 @@ it('Header 中input框值发生变化，数据应该跟着变化', () => {
 // 希望不触发add事件
 it('Header中input框输入回车无内容时，无反应', () => {
   const wrapper = shallowMount(Header)
-  const input = findTestWrapper(wrapper, '[data-test="input"]')
+  const input = findTestWrapper(wrapper, '[data-test="input"]').at(0)
   input.setValue('')
   input.trigger('keyup.enter')
   expect(wrapper.emitted().add).toBeFalsy()
@@ -44,7 +44,7 @@ it('Header中input框输入回车无内容时，无反应', () => {
 // 当用户输入内容，点击回车按键， 触发事件
 it('Header中input框输入回车有内容时，触发事件', () => {
   const wrapper = shallowMount(Header)
-  const input = findTestWrapper(wrapper, '[data-test="input"]')
+  const input = findTestWrapper(wrapper, '[data-test="input"]').at(0)
   input.setValue('hxx')
   input.trigger('keyup.enter')
   expect(wrapper.emitted().add).toBeTruthy()
@@ -52,7 +52,7 @@ it('Header中input框输入回车有内容时，触发事件', () => {
 // 当用户输入内容，点击回车按键， 触发事件并且清空内容
 it('Header中input框输入回车有内容时，触发事件， 同时清空inputValue', () => {
   const wrapper = shallowMount(Header)
-  const input = findTestWrapper(wrapper, '[data-test="input"]')
+  const input = findTestWrapper(wrapper, '[data-test="input"]').at(0)
   input.setValue('hxx')
   input.trigger('keyup.enter')
   expect(wrapper.emitted().add).toBeTruthy()
