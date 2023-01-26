@@ -1,25 +1,34 @@
 <template>
     <div class="header">
       <div class="header-content">
-        TodoList: <input data-test="header-input" v-model="inputValue" @keyup.enter="changeInput" class="input" placeholder="请添加todo item">
+        TodoList: <input data-test="header-input" :value="inputValue" @keyup.enter="addItem" class="input" placeholder="请添加todo item"
+        @input="(e) => changeInputValue(e.target.value)">
       </div>
     </div>
 </template>
 
 <script>
+import { mapState, mapMutations } from 'vuex'
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: 'Header',
-  data () {
-    return {
-      inputValue: '123'
-    }
+  // data () {
+  //   return {
+  //     inputValue: '123'
+  //   }
+  // },
+  computed: {
+    ...mapState(['inputValue'])
   },
   methods: {
-    changeInput () {
+    ...mapMutations({
+      changeInputValue: 'changeInputValue',
+      clearInput: 'clearInput'
+    }),
+    addItem () {
       if (this.inputValue) {
         this.$emit('add', this.inputValue)
-        this.inputValue = ''
+        this.clearInput()
       }
     }
   }

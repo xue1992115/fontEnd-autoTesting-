@@ -5,13 +5,14 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit --watch",
-    "test:cov": "vue-cli-service test:unit --coverage",
+    "test:integration": "vue-cli-service test:unit --watch",
+    "test:cov": "vue-cli-service test:integration --coverage",
     "lint": "vue-cli-service lint --fix"
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "vue": "^3.2.13"
+    "vue": "^3.2.13",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

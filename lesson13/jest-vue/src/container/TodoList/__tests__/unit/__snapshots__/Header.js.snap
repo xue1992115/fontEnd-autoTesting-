@@ -20,8 +20,8 @@ VueWrapper {
            TodoList: 
           <input
             class="input"
-            data-test="input"
-            placeholder="请添加todo itemw"
+            data-test="header-input"
+            placeholder="请添加todo item"
           />
         </div>
       </div>
@@ -433,17 +433,17 @@ VueWrapper {
                     "dynamicProps": null,
                     "el": <input
                       class="input"
-                      data-test="input"
-                      placeholder="请添加todo itemw"
+                      data-test="header-input"
+                      placeholder="请添加todo item"
                     />,
                     "key": null,
                     "patchFlag": 544,
                     "props": Object {
                       "class": "input",
-                      "data-test": "input",
+                      "data-test": "header-input",
                       "onKeyup": [Function],
                       "onUpdate:modelValue": [Function],
-                      "placeholder": "请添加todo itemw",
+                      "placeholder": "请添加todo item",
                     },
                     "ref": null,
                     "scopeId": null,
@@ -470,8 +470,8 @@ VueWrapper {
                    TodoList: 
                   <input
                     class="input"
-                    data-test="input"
-                    placeholder="请添加todo itemw"
+                    data-test="header-input"
+                    placeholder="请添加todo item"
                   />
                 </div>,
                 "key": null,
@@ -526,17 +526,17 @@ VueWrapper {
                 "dynamicProps": null,
                 "el": <input
                   class="input"
-                  data-test="input"
-                  placeholder="请添加todo itemw"
+                  data-test="header-input"
+                  placeholder="请添加todo item"
                 />,
                 "key": null,
                 "patchFlag": 544,
                 "props": Object {
                   "class": "input",
-                  "data-test": "input",
+                  "data-test": "header-input",
                   "onKeyup": [Function],
                   "onUpdate:modelValue": [Function],
-                  "placeholder": "请添加todo itemw",
+                  "placeholder": "请添加todo item",
                 },
                 "ref": null,
                 "scopeId": null,
@@ -562,8 +562,8 @@ VueWrapper {
                  TodoList: 
                 <input
                   class="input"
-                  data-test="input"
-                  placeholder="请添加todo itemw"
+                  data-test="header-input"
+                  placeholder="请添加todo item"
                 />
               </div>
             </div>,
@@ -616,8 +616,8 @@ VueWrapper {
              TodoList: 
             <input
               class="input"
-              data-test="input"
-              placeholder="请添加todo itemw"
+              data-test="header-input"
+              placeholder="请添加todo item"
             />
           </div>
         </div>,
@@ -713,8 +713,8 @@ VueWrapper {
              TodoList: 
             <input
               class="input"
-              data-test="input"
-              placeholder="请添加todo itemw"
+              data-test="header-input"
+              placeholder="请添加todo item"
             />
           </div>
         </div>,
@@ -955,8 +955,8 @@ VueWrapper {
        TodoList: 
       <input
         class="input"
-        data-test="input"
-        placeholder="请添加todo itemw"
+        data-test="header-input"
+        placeholder="请添加todo item"
       />
     </div>
   </div>,
