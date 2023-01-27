@@ -1,7 +1,9 @@
 import { createStore } from 'vuex'
 const store = createStore({
-  state: {
-    inputValue: '123'
+  state () {
+    return {
+      inputValue: '123'
+    }
   },
   mutations: {
     changeInputValue (state, payload) {

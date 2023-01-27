@@ -8,6 +8,7 @@
 <script>
 import Header from './components/Header.vue'
 import UndoList from './components/UndoList.vue'
+import axios from 'axios'
 export default {
   name: 'TodoList',
   components: {
@@ -18,6 +19,9 @@ export default {
     return {
       undoList: []
     }
+  },
+  mounted () {
+    this.getData()
   },
   methods: {
     addUndoItem (item) {
@@ -42,6 +46,10 @@ export default {
       if (index !== undefined) {
         this.undoList[index].value = value
       }
+    },
+    async getData () {
+      const res = await axios.get('/getUndoList.json')
+      this.undoList = res
     }
   }
 }
